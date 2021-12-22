@@ -23,12 +23,12 @@ public class StudentController {
     @Autowired
     BookRepository bookRepository;
 
-    @PostMapping("saveStudent")
+    @PostMapping("save-student")
     public void saveStudent(@RequestBody Student student){
         studentDao.insertStudent(student);
     }
 
-    @PostMapping("postStudent")
+    @PostMapping("add-student")
     public void postStudent(@RequestBody Student student){
         studentRepository.save(student);
     }
@@ -44,7 +44,7 @@ public class StudentController {
     }
 
 
-    @PostMapping("postBook")
+    @PostMapping("add-book")
     public void postBook(@RequestBody Book book){
         bookRepository.save(book);
     }
